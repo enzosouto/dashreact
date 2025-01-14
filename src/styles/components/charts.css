@@ -1,0 +1,57 @@
+.charts-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .chart-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .status-legend {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .dot.active { background-color: #4CAF50; }
+  .dot.paused { background-color: #FFC107; }
+  .dot.concluded { background-color: #9E9E9E; }
+  
+  .campaigns-list {
+    margin-top: 20px;
+  }
+  
+  .campaign-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .campaign-item.selected {
+    background-color: #ff2a2a;
+  }
+  
+  .campaign-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: auto;
+  }
+  
+  
