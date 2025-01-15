@@ -27,10 +27,78 @@
     font-weight: bold;
     margin-top: 8px;
   }
-  
+  a
   .metric-icon {
     width: 40px;
     height: 40px;
     color: #666;
   }
+/* Adicione isso ao seu arquivo de estilos (src/styles/components/metrics.css) */
+
+.metric-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
   
+  .metric-card.selected {
+    background: #f8f9fa;
+    border: 2px solid #007bff;
+  }
+  
+  .metric-icon {
+    width: 40px;
+    height: 40px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .metric-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  
+  .metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #333;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .metric-card:hover .metric-icon {
+    color: #007bff;
+  }
+  .metric-card .metric-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .metric-card:hover .metric-icon {
+    color: #007bff;
+  }
+  
+  /* Ajuste específico para o ícone do Material-UI */
+  .metric-card[data-type="investment"] .metric-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

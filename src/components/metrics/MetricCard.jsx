@@ -4,6 +4,7 @@ const MetricCard = ({ type, title, value, icon, selected, onClick }) => {
   return (
     <div 
       className={`metric-card ${selected ? 'selected' : ''}`}
+      data-type={type}
       onClick={() => onClick(type)}
     >
       <div>
