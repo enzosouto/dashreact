@@ -1,3 +1,4 @@
+/* src/styles/components/layout.css */
 .sidebar {
     position: fixed;
     left: 0;
@@ -25,15 +26,15 @@
   }
   
   .menu-item {
-    padding: 12px 20px;
-    margin: 4px 0;
+    padding:18px 18px;
+    margin: 8px 0;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .menu-item.active {
-    background-color: #ffd82c;
+    background-color: #ffc916;
   }
   
   .icon {
@@ -46,3 +47,65 @@
     padding: 30px;
   }
   
+  /* Melhorias para responsividade dos cards */
+  .metrics-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .metric-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .metric-card.selected {
+    background: #FFF9C4;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Responsividade básica */
+  @media (max-width: 1200px) {
+    .charts-row {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .charts-row {
+      gap: 15px;
+    }
+    
+    .metrics-cards {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
