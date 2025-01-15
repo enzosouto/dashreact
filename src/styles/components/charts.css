@@ -34,17 +34,34 @@
     margin-top: 20px;
   }
   
-  .campaign-item {
+  /* Atualize esta parte no seu arquivo src/styles/components/charts.css */
+
+.campaign-item {
     display: flex;
     align-items: center;
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+    background: #fff;
   }
   
   .campaign-item.selected {
-    background-color: #ff2a2a;
+    background-color: #ff4d4f;  /* Vermelho */
+    color: white;  /* Texto branco quando selecionado */
+  }
+  
+  .campaign-item span {
+    transition: color 0.3s ease;
+  }
+  
+  .campaign-item.selected span {
+    color: white;  /* Garante que todo texto dentro fique branco */
+  }
+  
+  .campaign-item.selected .dot {
+    border: 2px solid white;  /* Adiciona uma borda branca ao dot quando selecionado */
   }
   
   .campaign-item img {
@@ -54,4 +71,11 @@
     margin-left: auto;
   }
   
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
   
